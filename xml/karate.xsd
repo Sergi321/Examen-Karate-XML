@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+ targetNamespace="http://www.adictosaltrabajo.com" xmlns:ns1="http://www.adictosaltrabajo.com">
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref=""/>
+        <xs:element ref="ns1:name"/>
+        <xs:element ref="ns1:estadoCivil"/>
+        <xs:element ref="ns1:company"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dni" type="xs:integer"/>
+  <xs:element name="estadoCivil" type="xs:NCName"/>
+  <xs:element name="company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:name"/>
+        <xs:element ref="ns1:url"/>
+        <xs:element ref="ns1:telefono"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="url" type="xs:anyURI"/>
+  <xs:element name="telefono" type="xs:integer"/>
+  <xs:element name="name" type="xs:string"/>
+</xs:schema>
